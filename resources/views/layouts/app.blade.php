@@ -14,7 +14,9 @@
 <body>
     @include('admin.partials.header')
     <div class="">
-        @include('admin.partials.aside')
+        @auth
+            @include('admin.partials.aside')
+        @endauth
         @yield('content')
     </div>
     @include('admin.partials.footer')

@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\dashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\Guest\PageController;
 
 // Rotta per la homepage per gli ospiti
@@ -26,7 +26,7 @@ Route::middleware(['auth', 'verified'])
     ->name('admin.')
     ->group(function () {
         // Mostra la dashboard dell'amministratore
-        Route::get('/', [UserController::class, 'index'])->name('home');
+        Route::get('/', [dashboardController::class, 'index'])->name('home');
     });
 
 // Include le rotte di autenticazione

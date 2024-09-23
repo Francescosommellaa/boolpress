@@ -8,7 +8,7 @@
                 <!-- Authentication Links -->
                 @guest
                     <div class="d-flex">
-                        <li class="nav-item px-3">
+                        <li class="nav-item pe-3">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))

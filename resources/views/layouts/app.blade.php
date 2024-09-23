@@ -13,8 +13,10 @@
 
 <body>
     @include('admin.partials.header')
-    @include('admin.partials.aside')
-    @yield('content')
+    <div class="">
+        @include('admin.partials.aside')
+        @yield('content')
+    </div>
     @include('admin.partials.footer')
 
 </body>
